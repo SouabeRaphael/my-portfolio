@@ -1,0 +1,208 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: black;
+  background-color: #efefef;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+  /* Design Header */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.content-header{
+  position: fixed;
+  width: 97%;
+  height: 130px;
+  left: 50%;
+  top: 1.5%;
+  transform: translate(-50%);
+  border-radius: 15px;
+  z-index: 20;
+}
+
+.content-header.scroll{
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.wrapper-header{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  z-index: 20;
+}
+
+.img-logo{
+  height: 90px;
+  width: 65px;
+}
+
+.menu{
+  display: flex;
+  font-size: 22px;
+}
+
+.item-nav{
+  text-decoration: none;
+  margin-right: 20px;
+  margin-left: 20px;
+  color: white;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+  /* Design content */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+.site-content{
+  width: 100%;
+  height: auto;
+}
+
+.wrapper-content{
+  width: 100%;
+  height: 100vh;
+  /* overflow-y:auto; */
+  scroll-snap-type: y mandatory;
+}
+
+.item-section{
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+.first-page {
+  background-image: url(../img/photo-noir-et-blanc-retouche.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  z-index: -10;
+}
+
+.network{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.list-network{
+  padding: 0;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.separator-top, .separator-bottom{
+  width: 2px;
+  height: 200px;
+  background-color: white;
+}
+
+.icon-network{
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.linkedin{
+  margin-top: 20px;
+}
+.git{
+  margin-top: 20px;
+}
+
+@media (min-width: 2000px) {
+  .separator-top, .separator-bottom{
+    height: 280px;
+  }
+}
+
+.section-title{
+  transform: translateX(100px);
+}
+
+.title-me{
+  font-size: 74px;
+  color: white;
+  font-weight: bold;
+}
+
+.description-title{
+  margin-top: 30px;
+  font-size: 22px;
+  color: white;
+}
+
+.actif-section{
+  position: fixed;
+  top: 50%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+}
+
+.item-landmark{
+  width: 3px;
+  height: 45px;
+  background-color: white;
+  margin: 30px 0 30px 0;
+}
+
+
+
+
+.sound{
+  position: fixed;
+  left: 0.8%;
+  top: 93%;
+}
+
+.circle-icon-sound{
+  width: 45px;
+  height: 45px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+}
+
+.fa-volume-high, .fa-volume-xmark{
+  font-size: 20px;
+}
+
+.scroll-down{
+  position: absolute;
+  top: 90%;
+  right: 0%;
+  transform: rotate(90deg);
+}
+
+.info-scroll{
+  color: white;
+  font-size: 15px;
+
+}
+
+.fa-arrow-right{
+  margin-left: 10px;
+  font-size: 16px;
+}

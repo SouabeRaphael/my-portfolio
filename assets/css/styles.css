@@ -19,6 +19,7 @@ body {
   /* Design Header */
 /* ------------------------------------------------------------------------------------------------------------------- */
 
+/* header */
 .content-header{
   position: fixed;
   width: 97%;
@@ -27,7 +28,7 @@ body {
   top: 1.5%;
   transform: translate(-50%);
   border-radius: 15px;
-  z-index: 20;
+  z-index: 5;
 }
 
 .content-header.scroll{
@@ -42,7 +43,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  z-index: 20;
+  z-index: 5;
 }
 
 .img-logo{
@@ -52,6 +53,8 @@ body {
 
 .menu{
   display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 22px;
 }
 
@@ -61,20 +64,175 @@ body {
   margin-left: 20px;
   color: white;
 }
+.item-nav:hover{
+  color: white;
+}
+
+/* Version actif des link de nav dans le header */
+
+.item-nav.actif::after{
+  content: '';
+  position:relative;
+  top: 5px;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  display: flex;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.item-nav::after{
+  content: '';
+  position:relative;
+  top: 5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  display: flex;
+  background-color: white;
+  transition: 0.3s;
+}
+.item-nav:hover::after{
+  width: 70%;
+}
+
+/* ---------------------------------- */
+/* menu burger */
+/* ---------------------------------- */
+
+.menu-burger{
+  width: 40px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+
+.menu-burger span{
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.menu-burger span::before, .menu-burger span::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 50px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu-burger span::before{
+  transform: translateY(10px);
+}
+
+.menu-burger span::after{
+  transform: translateY(-10px);
+}
+
+.menu-burger.active span{
+  background-color: transparent;
+}
+
+.menu-burger.active span::before{
+  transform: translateY(0) rotateZ(45deg);
+}
+
+.menu-burger.active span::after{
+  transform: translateY(0) rotateZ(-45deg);
+}
+
+/* ------------------------------------------------ */
+/* Creation et afficher du menu mobile en plein ecran */
+/* ------------------------------------------------ */
+
+.menu-anim{
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 100px;
+  z-index: 4;
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-anim.is-active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-list{
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.menu-item:not(:last-child){
+  margin-bottom: 30px;
+}
+
+.menu-link{
+  position: relative;
+  display: inline-flex;
+  font-weight: bold;
+  font-size: 35px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu-link:hover{
+  color: white;
+}
+
+.menu-link::after{
+  content: '';
+  position:absolute;
+  bottom: -20px;
+  left: 0;
+  width: 0;
+  height: 5px;
+  display: inline-flex;
+  background-color: #c5e600;
+  transition: 0.3s;
+}
+.menu-link:hover::after{
+  width: 100%;
+}
+
+/* Fin header */
 
 /* ------------------------------------------------------------------------------------------------------------------- */
   /* Design content */
 /* ------------------------------------------------------------------------------------------------------------------- */
 
+/* -------------------------------------------- */
+/* Contenu premier page, page accueil */
+/* -------------------------------------------- */
 .site-content{
   width: 100%;
   height: auto;
+  overflow-x: hidden;
 }
 
 .wrapper-content{
   width: 100%;
   height: 100vh;
-  /* overflow-y:auto; */
+  /* overflow-y: scroll; */
   scroll-snap-type: y mandatory;
 }
 
@@ -82,8 +240,11 @@ body {
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
+  position: relative;
+  z-index: -6;
 }
 
+/* Image fond */
 .first-page {
   background-image: url(../img/photo-noir-et-blanc-retouche.png);
   background-position: center;
@@ -92,9 +253,10 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  z-index: -10;
+  z-index: -5;
 }
 
+/* bar latteral reseau */
 .network{
   position: relative;
   display: flex;
@@ -129,12 +291,7 @@ body {
   margin-top: 20px;
 }
 
-@media (min-width: 2000px) {
-  .separator-top, .separator-bottom{
-    height: 280px;
-  }
-}
-
+/* Titre principal */
 .section-title{
   transform: translateX(100px);
 }
@@ -144,6 +301,13 @@ body {
   color: white;
   font-weight: bold;
 }
+/* titre principal mobile */
+.title-me-mobile{
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  display: none;
+}
 
 .description-title{
   margin-top: 30px;
@@ -151,6 +315,14 @@ body {
   color: white;
 }
 
+.description-title-mobile{
+  margin-top: 30px;
+  font-size: 22px;
+  color: white;
+  display: none;
+}
+
+/* zone actif en fonction des pages */
 .actif-section{
   position: fixed;
   top: 50%;
@@ -165,9 +337,7 @@ body {
   margin: 30px 0 30px 0;
 }
 
-
-
-
+/* Button musique */
 .sound{
   position: fixed;
   left: 0.8%;
@@ -175,6 +345,7 @@ body {
 }
 
 .circle-icon-sound{
+  position: relative;
   width: 45px;
   height: 45px;
   backdrop-filter: blur(15px);
@@ -189,6 +360,7 @@ body {
   font-size: 20px;
 }
 
+/* info scroll */
 .scroll-down{
   position: absolute;
   top: 90%;
@@ -205,4 +377,237 @@ body {
 .fa-arrow-right{
   margin-left: 10px;
   font-size: 16px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Media queries page d'accueil, (responsive) */
+/* ---------------------------------------------------------------------- */
+
+@media (min-width: 2000px) {
+  .separator-top, .separator-bottom{
+    height: 280px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .title-me{
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .title-me{
+    font-size: 45px;
+  }
+  .menu{
+    display: none;
+  }
+  .menu-burger{
+    display: block;
+  }
+}
+
+@media (max-width: 950px) {
+  .actif-section{
+    display: none;
+  }
+  .title-me{
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .title-me{
+    display: none;
+  }
+  .network{
+    display: none;
+  }
+  .title-me-mobile{
+    display: block;
+  }
+}
+@media (max-width: 650px) {
+  .description-title{
+    display: none;
+  }
+  .description-title-mobile{
+    display: block;
+    line-height: 2rem;
+  }
+  .section-title{
+    transform: translateX(50px);
+  }
+  .img-logo{
+    height: 80px;
+    width: 55px;
+  }
+  .menu-anim{
+    padding: 10px;
+  }
+}
+
+/* ---------------------------------------------- */
+/* deuxième section, parlons de moi */
+/* ---------------------------------------------- */
+
+.seconde-page{
+  width: 100%;
+  height: 100vh;
+  background-color: #36382E;
+}
+
+.content-me{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+}
+
+.profil{
+  width: 455px;
+  height: 592px;
+}
+
+.border-picture{
+  position: absolute;
+  top: 15%;
+  left: -2%;
+  width: 455px;
+  height: 592px;
+  background-color: transparent;
+  border: 2px solid white;
+  z-index: -2;
+}
+
+.about-me{
+  margin-left: 50px;
+}
+
+.category{
+  width: 140px;
+  height: 40px;
+  background-color: rgb(112, 112, 112, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+}
+
+.student-title{
+  color: white;
+  font-size: 55px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.description{
+  width: 65%;
+  font-size: 20px;
+  line-height: 2rem;
+  color: white;
+}
+
+.download-CV{
+  font-size: 18px;
+  border-radius: 30px 0 30px 0;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+
+.bg-title{
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  font-size: 400px;
+  color: rgb(255, 255, 255, 0.2);
+  white-space: nowrap;
+}
+
+@media (min-width: 2000px) {
+  .border-picture{
+    position: absolute;
+    top: 20%;
+  }
+}
+@media (max-width: 1800px) {
+  .border-picture{
+    position: absolute;
+    top: 20%;
+  }
+}
+@media (max-width: 1200px) {
+  .content-me{
+    flex-direction: column;
+  }
+  .about-me{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  .border-picture{
+    display: none;
+  }
+  .profil{
+    width: 380px;
+    height: 490px;
+  }
+  .student-title{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  .description{
+    width: 90%;
+    font-size: 18px;
+    line-height: 2rem;
+    color: white;
+  }
+  .download-CV{
+    width: auto;
+    margin: auto;
+    font-size: 15px;
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 800px) {
+  .profil{
+    width: 350px;
+    height: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .profil{
+    width: 210px;
+    height: 274px;
+  }
+  .student-title{
+    font-size: 30px;
+  }
+  .description{
+    font-size: 15px;
+  }
+  .bg-title{
+    display: none;
+  }
+}
+
+/* ---------------------------------------------- */
+/* troisième section, mes compétences */
+/* ---------------------------------------------- */
+
+.third-page{
+  width: 100%;
+  height: 100vh;
+  background-color: #464655;
 }

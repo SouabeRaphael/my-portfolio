@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mon portfolio</title>
     <meta name="description" content="">
     <!-- appel cdn reset css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
@@ -26,19 +26,33 @@
     <!---------------------------------------------------------------Header------------------------------------------------------------->
     <header class="content-header">
         <div class="wrapper-header">
+            <!-- Logo -->
             <figure class="m-0">
                 <a href="#"><img class="img-logo" src="./assets/img/Fichier 1.png"></a>
             </figure>
+            <!-- Navigation desktop -->
             <nav class="menu">
-                <a href="#" class="item-nav">Menu</a>
+                <a href="#" class="item-nav actif">Menu</a>
                 <a href="#" class="item-nav">Parlons de moi</a>
                 <a href="#" class="item-nav">Compétences</a>
                 <a href="#" class="item-nav">Portfolio</a>
                 <a href="#" class="item-nav">Contact</a>
             </nav>
+            <!-- Menu burger -->
+            <div class="menu-burger">
+                <span></span>
+            </div>
         </div>
-
     </header>
+    <!-- Full screen menu mobile -->
+    <div class="menu-anim">
+        <ul class="menu-list">
+            <li class="menu-item"><a href="#" class="menu-link">Menu</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Parlons de moi</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Compétences</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+        </ul>
+    </div>
     <!---------------------------------------------------------------Fin header------------------------------------------------------------->
 
 
@@ -46,7 +60,9 @@
     <!---------------------------------------------------------------Contenu principal------------------------------------------------------------->
     <main class="site-content">
         <div class="wrapper-content">
+            <!-- Premier page, page accueil -->
             <section class="first-page item-section">
+                <!-- bar l'atteral reseau -->
                 <div class="network">
                     <div class="separator-top"></div>
                     <ul class="list-network">
@@ -56,16 +72,21 @@
                     </ul>
                     <div class="separator-bottom"></div>
                 </div>
+                <!-- Titre principal -->
                 <div class="section-title">
                     <h1 class="title-me">Hi, je suis Souabe Raphaël</h1>
+                    <h1 class="title-me-mobile">Hi, je suis<br> Souabe Raphaël</h1>
                     <p class="description-title">Etudiant en tant que developper/designer web</p>
+                    <p class="description-title-mobile">Etudiant en tant que<br> developper/designer web</p>
                 </div>
+                <!-- marque actif en fonction des pages -->
                 <div class="actif-section">
                     <div class="item-landmark"></div>
                     <div class="item-landmark"></div>
                     <div class="item-landmark"></div>
                     <div class="item-landmark"></div>
                 </div>
+                <!-- boutton pour la musique -->
                 <div class="sound">
                     <div class="circle-icon-sound"><i class="fa-solid fa-volume-xmark"></i></div>
 
@@ -73,15 +94,42 @@
                         <source src="./assets/media/y2metacom-2-128-kbps_FZrx5N8c.mp3" type="audio/mp3">
                     </audio>
                 </div>
+                <!-- info scroll -->
                 <div class="scroll-down">
                     <p class="info-scroll">Scroll down<i class="fa-solid fa-arrow-right"></i></p>
                 </div>
             </section>
-            <section class="item-section">
+
+            <!-- Deuxième section, parlons de moi -->
+            <section class="seconde-page item-section">
+                <b class="bg-title">about me</b>
+                <div class="content-me">
+                    <div class="border-picture"></div>
+                    <figure class="picture-profil">
+                        <img class="profil" src="./assets/img/photo-profil.jpg">
+                    </figure>
+                    <div class="about-me">
+                        <div class="category">Parlons de moi</div>
+                        <h1 class="student-title">Etudiant</h1>
+                        <p class="description">Actuellement étudiant à l’école La Manu Le Havre, en première année de bachelor en tant que developper/designer web. Je suis naturellement attiré par les métiers du numérique et du multimédia. Je suis une personne passionnée par mes études, ou j'y mes beaucoup de détermination et de motivation. D'ailleurs, je suis actuellement à la recherche de challenges et de projets ambitieux.</p>
+                        <button class="download-CV">TELECHARGER MON CV</button>
+                    </div>
+                </div>
+                <!-- info scroll -->
+                <div class="scroll-down">
+                    <p class="info-scroll">Scroll down<i class="fa-solid fa-arrow-right"></i></p>
+                </div>
 
             </section>
-            <section class="item-section">
 
+            <!-- Troisième section, mes compétences -->
+            <section class="third-page item-section">
+                <b class="bg-title">compétences</b>
+            </section>
+
+            <!-- Troisième section, mes compétences -->
+            <section class="third-page item-section">
+                <b class="bg-title">portfolio</b>
             </section>
         </div>
 

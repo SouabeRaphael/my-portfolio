@@ -568,7 +568,7 @@ body {
     margin: 20px 0;
   }
   .description{
-    width: 90%;
+    width: 100%;
     font-size: 18px;
     line-height: 2rem;
     color: white;
@@ -585,10 +585,13 @@ body {
     width: 350px;
     height: 400px;
   }
+  .scroll-down{
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .profil{
-    width: 210px;
+    width: 250px;
     height: 274px;
   }
   .student-title{
@@ -599,6 +602,14 @@ body {
   }
   .bg-title{
     display: none;
+  }
+  .category{
+    width: 120px;
+    height: 30px;
+    font-size: 11px;
+  }
+  .content-me{
+    transform: translateY(40px);
   }
 }
 

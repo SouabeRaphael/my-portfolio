@@ -24,17 +24,22 @@ window.addEventListener('scroll', linkActif);
 function linkActif(){
 
   let link1 = document.getElementById("link-1");
-  console.log(link1)
   let link2 = document.getElementById("link-2");
   let link3 = document.getElementById("link-3");
+  let link4 = document.getElementById("link-4");
+  let link5 = document.getElementById("link-5");
 
   let section1 = document.getElementById("1");
   let section2 = document.getElementById("2");
   let section3 = document.getElementById("3");
+  let section4 = document.getElementById("4");
+  let section5 = document.getElementById("5");
 
   var section1Cal = section1.offsetHeight+section1.offsetTop;
   var section2Cal = section2.offsetHeight+section2.offsetTop;
   var section3Cal = section3.offsetHeight+section3.offsetTop;
+  var section4Cal = section4.offsetHeight+section4.offsetTop;
+  var section5Cal = section5.offsetHeight+section5.offsetTop;
 
   let scroolY = window.scrollY;
 
@@ -57,6 +62,18 @@ function linkActif(){
   } 
   else{
     link3.classList.remove('actif');
+  }
+  if (scroolY >= section3Cal && scroolY <= section4Cal){
+    link4.classList.add('actif');
+  } 
+  else{
+    link4.classList.remove('actif');
+  }
+  if (scroolY >= section4Cal && scroolY <= section5Cal){
+    link5.classList.add('actif');
+  } 
+  else{
+    link5.classList.remove('actif');
   }
 }
 

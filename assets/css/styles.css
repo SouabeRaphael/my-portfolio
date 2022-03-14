@@ -24,7 +24,7 @@ body {
 .content-header{
   position: fixed;
   width: 97%;
-  height: 130px;
+  height: 100px;
   left: 50%;
   top: 1.5%;
   transform: translate(-50%);
@@ -48,7 +48,7 @@ body {
 }
 
 .img-logo{
-  height: 90px;
+  height: 80px;
   width: 65px;
 }
 
@@ -241,11 +241,14 @@ body {
   width: 100%;
   height: 100vh;
   scroll-snap-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: relative;
 }
 
 /* Image fond */
 .first-page {
+  width: 100%;
+  height: 100vh;
   background-image: url(../img/photo-noir-et-blanc-retouche.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -353,6 +356,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center ;
+  cursor: pointer;
 }
 
 .fa-volume-high, .fa-volume-xmark{
@@ -524,6 +528,19 @@ body {
   padding: 20px 30px;
   margin-top: 30px;
 }
+.download-CV:hover{
+  background-color: rgb(255, 255, 255, 0.8);
+  border: 2px solid #36382E;
+  color: #36382E;
+}
+
+/* background Title section */
+.container-bg-title{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
 .bg-title{
   position: absolute;
@@ -551,7 +568,20 @@ body {
     top: 20%;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
+  .description{
+    width: 85%;
+  }
+}
+@media (max-width: 1300px) {
+  .description{
+    width: 95%;
+  }
+}
+@media (max-width: 1000px) {
+  .seconde-page{
+    height: 110vh;
+  }
   .content-me{
     flex-direction: column;
   }
@@ -590,8 +620,8 @@ body {
 }
 @media (max-width: 800px) {
   .profil{
-    width: 350px;
-    height: 400px;
+    width: 330px;
+    height: 350px;
   }
   .scroll-down{
     display: none;
@@ -920,6 +950,9 @@ body {
   .progress {
     width: 650px;
   }
+  .third-page{
+    height: 110vh;
+  }
 }
 @media (max-width: 700px) {
   .progress {
@@ -941,4 +974,166 @@ body {
   .progress {
     width: 350px;
   }
+}
+
+
+/* ---------------------------------------------- */
+/* quatrième section, portfolio */
+/* ---------------------------------------------- */
+
+.fourth-page{
+  width: 100%;
+  height: auto;
+  background-color: #885A5A;
+  z-index: -99;
+}
+
+.content-fourth-section{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.card-item{
+  width: 90%;
+  height: 70vh;
+  background-color: white;
+  border-top: 35px solid #464655;
+  border-radius: 15px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-interlocking-card{
+  position: sticky;
+  top: 160px;
+}
+
+.illustration-first-card{
+  width: 45%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-portfolio{
+  width: 100%;
+  z-index: 50;
+}
+
+.section-rigth-card-first-card{
+  width: 55%;
+  height: 60%;
+  padding-left: 20px;
+}
+
+.info-card{
+  display: flex;
+  align-items: center;
+}
+
+.circle-picto{
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 3px solid #885A5A;
+  border-radius: 100px;
+}
+
+.fa-desktop{
+  font-size: 30px;
+}
+
+.title-card{
+  margin-left: 25px;
+  color: #885A5A;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.description-portfolio{
+  width: 80%;
+  margin-top: 30px;
+  padding-left: 30px;
+  font-size: 18px;
+  line-height: 2rem;
+}
+
+.section-left-card{
+  width: 50%;
+  height: 100%;
+  margin: 0;
+}
+
+.img-projet-portfolio{
+  width: 100%;
+  height: 100%;
+}
+
+.section-rigth-card{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.tools-to-use{
+  margin-top: 30px;
+  line-height: 1.5rem;
+}
+
+.title-language{
+  color: #885A5A;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.liste-tool-use{
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.seconde-interlocking-card{
+  position: sticky;
+  top: 220px;
+}
+
+.thrid-interlocking-card{
+  position: sticky;
+  top: 250px;
+}
+
+
+/* info scroll */
+.scroll-down-portfolio{
+  position: absolute;
+  top: 94%;
+  right: 0%;
+  transform: rotate(90deg);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Media queries fourth page, portfolio (responsive) */
+/* ---------------------------------------------------------------------- */
+
+
+
+.fifth-page{
+  background-color: #018673;
+  z-index: -99;
 }

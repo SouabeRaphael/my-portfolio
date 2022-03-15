@@ -988,6 +988,7 @@ body {
   z-index: -99;
 }
 
+/* Container card section portfolio*/
 .content-fourth-section{
   width: 90%;
   height: 100%;
@@ -1000,11 +1001,12 @@ body {
   padding-bottom: 100px;
 }
 
+/* Card item */
 .card-item{
   width: 90%;
   height: 70vh;
   background-color: white;
-  border-top: 35px solid #464655;
+  border-top: 15px solid #464655;
   border-radius: 15px;
   margin-top: 100px;
   display: flex;
@@ -1012,9 +1014,10 @@ body {
   align-items: center;
 }
 
+/* illsutration first card */
 .first-interlocking-card{
   position: sticky;
-  top: 160px;
+  top: 150px;
 }
 
 .illustration-first-card{
@@ -1030,12 +1033,14 @@ body {
   z-index: 50;
 }
 
+/* section rigth card first card */
 .section-rigth-card-first-card{
   width: 55%;
   height: 60%;
   padding-left: 20px;
 }
 
+/* Circle picto and title card */
 .info-card{
   display: flex;
   align-items: center;
@@ -1056,6 +1061,7 @@ body {
   font-size: 30px;
 }
 
+/* Title and description card */
 .title-card{
   margin-left: 25px;
   color: #885A5A;
@@ -1071,17 +1077,24 @@ body {
   line-height: 2rem;
 }
 
+/* --------------------------------------- */
+/* Card project */
+
+/* section left card project */
 .section-left-card{
   width: 50%;
   height: 100%;
   margin: 0;
 }
 
+/* image project */
 .img-projet-portfolio{
   width: 100%;
   height: 100%;
+  border-radius: 0 0 0 15px;
 }
 
+/* section right card project */
 .section-rigth-card{
   width: 50%;
   height: 100%;
@@ -1091,6 +1104,7 @@ body {
   padding-left: 50px;
 }
 
+/* section langues and tools to use card project */
 .tools-to-use{
   margin-top: 30px;
   line-height: 1.5rem;
@@ -1108,21 +1122,60 @@ body {
   font-size: 15px;
 }
 
-.seconde-interlocking-card{
-  position: sticky;
-  top: 220px;
+
+/* Button discover project */
+.container-btn-card{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: end;
+  margin-top: 60px;
 }
 
-.thrid-interlocking-card{
+.discover-project{
+  width: auto;
+  background-color: transparent;
+  border: none;
+  margin-right: 30px;
+  font-size: 20px;
+  color: #464655;
+}
+.arrow-card{
+  font-size: 20px;
+  color: #464655;
+}
+
+/* Initialisation postion of each card */
+.seconde-interlocking-card{
   position: sticky;
-  top: 250px;
+  top: 180px;
+}
+
+.third-interlocking-card{
+  position: sticky;
+  top: 210px;
+}
+
+.fourth-interlocking-card{
+  position: sticky;
+  top: 240px;
+}
+
+.fifth-interlocking-card{
+  position: sticky;
+  top: 270px;
+}
+
+.sixth-interlocking-card{
+  position: sticky;
+  top: 150px;
 }
 
 
 /* info scroll */
 .scroll-down-portfolio{
   position: absolute;
-  top: 94%;
+  top: 97.7%;
   right: 0%;
   transform: rotate(90deg);
 }
@@ -1131,7 +1184,144 @@ body {
 /* Media queries fourth page, portfolio (responsive) */
 /* ---------------------------------------------------------------------- */
 
+@media (max-width: 1500px) {
+  .container-btn-card{
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1400px) {
+  .container-btn-card{
+    margin-top: 0;
+  }
+}
+@media (max-width: 1200px) {
+  .card-item{
+    flex-direction: column;
+  }
 
+  /* First card */
+  .illustration-first-card{
+    width: 90%;
+    height: 40%;
+    margin: 0;
+  }
+  
+  .illustration-portfolio{
+    width: 80%;
+    height: 100%;
+    z-index: 50;
+  }
+  .section-rigth-card-first-card{
+    width: 90%;
+    height: 60%;
+    padding-left: 0;
+  }
+
+  /* card project */
+  .section-left-card{
+    width: 100%;
+    height: 40%;
+    margin: 0;
+  }
+  .img-projet-portfolio{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 0 15px;
+  }
+  
+  .section-rigth-card{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 50px;
+  }
+
+  .circle-picto{
+    width: 60px;
+    height: 60px;
+  }
+  
+  .fa-desktop{
+    font-size: 20px;
+  }
+  
+  /* Title and description card */
+  .title-card{
+    margin-left: 25px;
+    color: #885A5A;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .description-portfolio{
+    width: 95%;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.8rem;
+  }
+  .tools-to-use{
+    margin-top: 10px;
+  }
+  .container-btn-card{
+    margin-top: -30px;
+  }
+}
+@media (max-width: 900px) {
+  .container-btn-card{
+    margin-top: -50px;
+  }
+}
+@media (max-width: 800px) {
+  .section-rigth-card{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .description-portfolio{
+    font-size: 15px;
+    line-height: 1.5rem;
+  }
+  .title-language{
+    font-size: 18px;
+  }
+  .container-btn-card{
+    margin-top: -10px;
+  }
+  .discover-project{
+    font-size: 15px;
+    margin-right: 0;
+  }
+  .arrow-card{
+    font-size: 15px;
+    color: #464655;
+  }
+  .scroll-down-portfolio{
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .container-btn-card{
+    margin-top: -40px;
+  }
+  .section-left-card{
+    height: 30%;
+  }
+  
+  .section-rigth-card{
+    width: 90%;
+    height: 70%;
+  }
+}
+
+
+/* ---------------------------------------------- */
+/* Cinquième section, contact */
+/* ---------------------------------------------- */
 
 .fifth-page{
   background-color: #018673;

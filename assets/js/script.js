@@ -63,7 +63,7 @@ function linkActif(){
   else{
     link3.classList.remove('actif');
   }
-  if (scroolY >= section3Cal && scroolY <= section4Cal){
+  if (scroolY >= section3Cal && scroolY < section4Cal){
     link4.classList.add('actif');
   } 
   else{

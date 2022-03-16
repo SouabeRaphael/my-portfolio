@@ -35,13 +35,19 @@ function linkActif(){
   let section4 = document.getElementById("4");
   let section5 = document.getElementById("5");
 
-  var section1Cal = section1.offsetHeight+section1.offsetTop;
-  var section2Cal = section2.offsetHeight+section2.offsetTop;
-  var section3Cal = section3.offsetHeight+section3.offsetTop;
-  var section4Cal = section4.offsetHeight+section4.offsetTop;
-  var section5Cal = section5.offsetHeight+section5.offsetTop;
+  let landmark1 = document.getElementById("landmark1");
+  let landmark2 = document.getElementById("landmark2");
+  let landmark3 = document.getElementById("landmark3");
+  let landmark4 = document.getElementById("landmark4");
+
+  var section1Cal = section1.offsetHeight+section1.offsetTop - 100;
+  var section2Cal = section2.offsetHeight+section2.offsetTop - 100;
+  var section3Cal = section3.offsetHeight+section3.offsetTop - 100;
+  var section4Cal = section4.offsetHeight+section4.offsetTop - 100;
+  var section5Cal = section5.offsetHeight+section5.offsetTop - 1020;
 
   let scroolY = window.scrollY;
+
 
   if(scroolY < section1Cal){
     link1.classList.add('actif');
@@ -52,28 +58,40 @@ function linkActif(){
 
   if (scroolY >= section1Cal && scroolY < section2Cal){
     link2.classList.add('actif');
+    landmark1.classList.add('defined');
   } 
   else{
     link2.classList.remove('actif');
+    landmark1.classList.remove('defined');
   }
 
   if (scroolY >= section2Cal && scroolY <= section3Cal){
     link3.classList.add('actif');
+    landmark2.classList.add('defined');
   } 
   else{
     link3.classList.remove('actif');
+    landmark2.classList.remove('defined');
   }
+
   if (scroolY >= section3Cal && scroolY < section4Cal){
     link4.classList.add('actif');
+    landmark3.classList.add('defined');
   } 
   else{
     link4.classList.remove('actif');
+    landmark3.classList.remove('defined');
   }
-  if (scroolY >= section4Cal && scroolY <= section5Cal){
+
+  if (scroolY >= section5Cal){
     link5.classList.add('actif');
+    link4.classList.remove('actif');
+    landmark4.classList.add('defined');
+    landmark3.classList.remove('defined');
   } 
   else{
     link5.classList.remove('actif');
+    landmark4.classList.remove('defined');
   }
 }
 

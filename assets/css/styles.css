@@ -673,7 +673,7 @@ body {
     font-size: 11px;
   }
   .content-me{
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
 }
 
@@ -986,6 +986,19 @@ body {
   }
 }
 @media (max-width: 600px) {
+  .tab-menu{
+    margin-top: 15px;
+  }
+  .item-tab{
+    line-height: 1.8rem;
+  }
+  .title-modul{
+    font-size: 25px;
+  }
+  .description-modul{
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
   .progress {
     width: 450px;
     height: 10px;
@@ -1003,7 +1016,7 @@ body {
   }
   
   .item-progress{
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 @media (max-width: 450px) {
@@ -1138,6 +1151,7 @@ body {
   justify-content: center;
   flex-direction: column;
   padding-left: 50px;
+  /* margin-top: 50px; */
 }
 
 /* section langues and tools to use card project */
@@ -1165,7 +1179,8 @@ body {
   height: auto;
   display: flex;
   justify-content: end;
-  margin-top: 60px;
+  position: relative;
+  top: 30px;
 }
 
 .discover-project{
@@ -1220,14 +1235,30 @@ body {
 /* Media queries fourth page, portfolio (responsive) */
 /* ---------------------------------------------------------------------- */
 
-@media (max-width: 1500px) {
+@media (max-width: 1800px) {
   .container-btn-card{
-    margin-top: 30px;
+    top: -20px;
+  }
+  .circle-picto{
+    width: 70px;
+    height: 70px;
+  }
+  .fa-desktop{
+    font-size: 25px;
+  }
+  .tools-to-use{
+    margin-top: 10px;
+  }
+  .title-card{
+    font-size: 28px;
   }
 }
 @media (max-width: 1400px) {
-  .container-btn-card{
-    margin-top: 0;
+  .description-portfolio{
+    width: 90%;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.8rem;
   }
 }
 @media (max-width: 1200px) {
@@ -1297,16 +1328,16 @@ body {
     font-size: 16px;
     line-height: 1.8rem;
   }
-  .tools-to-use{
-    margin-top: 10px;
-  }
-  .container-btn-card{
-    margin-top: -30px;
-  }
 }
 @media (max-width: 900px) {
+  .tools-to-use{
+    display: none;
+  }
   .container-btn-card{
-    margin-top: -50px;
+    top: 15px;
+  }
+  .discover-project{
+    margin-right: 0;
   }
 }
 @media (max-width: 800px) {
@@ -1318,15 +1349,27 @@ body {
     flex-direction: column;
     padding-left: 0;
   }
-  .description-portfolio{
-    font-size: 15px;
-    line-height: 1.5rem;
+  .circle-picto{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #885A5A;
   }
-  .title-language{
-    font-size: 18px;
+  
+  .fa-desktop{
+    font-size: 16px;
+  }
+
+  .title-card{
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .description-portfolio{
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 1.4rem;
   }
   .container-btn-card{
-    margin-top: -10px;
+    top: -10px;
   }
   .discover-project{
     font-size: 15px;
@@ -1341,9 +1384,6 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .container-btn-card{
-    margin-top: -40px;
-  }
   .section-left-card{
     height: 30%;
   }
@@ -1353,7 +1393,6 @@ body {
     height: 70%;
   }
 }
-
 
 /* ---------------------------------------------- */
 /* Cinquième section, contact */

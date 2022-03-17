@@ -37,6 +37,11 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+/* .content-header.scroll{
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.5);
+} */
+
 .content-header.change_color_black{
   backdrop-filter: blur(15px);
   background-color: rgba(0, 0, 0, 0.5);
@@ -309,25 +314,11 @@ body {
   color: white;
   font-weight: bold;
 }
-/* titre principal mobile */
-.title-me-mobile{
-  font-size: 40px;
-  color: white;
-  font-weight: bold;
-  display: none;
-}
 
 .description-title{
   margin-top: 30px;
   font-size: 22px;
   color: white;
-}
-
-.description-title-mobile{
-  margin-top: 30px;
-  font-size: 22px;
-  color: white;
-  display: none;
 }
 
 /* zone actif en fonction des pages */
@@ -450,21 +441,25 @@ body {
 
 @media (max-width: 800px) {
   .title-me{
-    display: none;
+    width: 30vh;
+  }
+  .title-me span{
+    white-space: nowrap;
   }
   .network{
     display: none;
   }
-  .title-me-mobile{
-    display: block;
+  .sound{
+    left: 5%;
+    top: 92%;
   }
 }
 @media (max-width: 650px) {
   .description-title{
-    display: none;
+    width: 30vh;
   }
-  .description-title-mobile{
-    display: block;
+  .description-title span{
+    white-space: nowrap;
     line-height: 2rem;
   }
   .section-title{
@@ -1141,10 +1136,35 @@ body {
 }
 
 /* image project */
-.img-projet-portfolio{
-  width: 100%;
-  height: 100%;
-  border-radius: 0 0 0 15px;
+#projet-1{
+  background-image: url(../img/img-femmeetinformatique.PNG);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#projet-2{
+  background-image: url(../img/e-commerce.PNG);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#projet-3{
+  background-image: url(../img/maquette-portfolio.PNG);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#projet-4{
+  background-image: url(../img/shifumi.PNG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#projet-5{
+  background-image: url(../img/projet-php-api.PNG);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* section right card project */
@@ -1155,7 +1175,7 @@ body {
   justify-content: center;
   flex-direction: column;
   padding-left: 50px;
-  /* margin-top: 50px; */
+  box-shadow: -5px 0 40px rgb(0, 0, 0, 0.5)
 }
 
 /* section langues and tools to use card project */

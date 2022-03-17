@@ -13,6 +13,12 @@ function addClassScroll(){
   else{
     contentHeader.classList.remove('scroll');
   }
+  if(window.scrollY > 6100){
+    contentHeader.classList.add('change_color_black');
+  }
+  else{
+    contentHeader.classList.remove('change_color_black');
+  }
 }
 
 // ----------------------------------------------------------
@@ -101,13 +107,23 @@ function linkActif(){
 // @@@
 let burger = document.querySelector(".menu-burger");
 let fullScreenMenu = document.querySelector(".menu-anim");
+let menu_link = document.querySelectorAll('.menu-link');
 
+// Fontion qui gere l'affichage du menu mobile
 burger.addEventListener("click", animBurger);
 
 function animBurger() {
   burger.classList.toggle("active");
   fullScreenMenu.classList.toggle("is-active");
 }
+
+// Function qui cache le menu mobile une fois avoir cliquer sur un lien
+menu_link.forEach(function(item){
+  if(item.onclick = function(){
+    fullScreenMenu.classList.toggle('is-active');
+    burger.classList.remove("active");
+  });
+})
 
 // ---------------------------------------------------------------------
 // @@@

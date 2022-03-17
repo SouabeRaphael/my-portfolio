@@ -35,7 +35,11 @@ body {
 .content-header.scroll{
   backdrop-filter: blur(15px);
   background-color: rgba(255, 255, 255, 0.5);
-  /* background-color: black; */
+}
+
+.content-header.change_color_black{
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .wrapper-header{
@@ -1334,7 +1338,7 @@ body {
     display: none;
   }
   .container-btn-card{
-    top: 15px;
+    top: 30px;
   }
   .discover-project{
     margin-right: 0;
@@ -1369,7 +1373,7 @@ body {
     line-height: 1.4rem;
   }
   .container-btn-card{
-    top: -10px;
+    top: 30px;
   }
   .discover-project{
     font-size: 15px;
@@ -1391,6 +1395,11 @@ body {
   .section-rigth-card{
     width: 90%;
     height: 70%;
+  }
+}
+@media (max-width: 400px) {
+  .container-btn-card{
+    top: -10px;
   }
 }
 
@@ -1543,7 +1552,6 @@ body {
   }
   
   .phone, .mail{
-
     font-size: 20px;
   }
   
@@ -1565,14 +1573,26 @@ body {
   .fifth-page{
     height: auto;
   }
-  
   .content-fifth-section{
     flex-direction: column;
   }
-
   .liste-means-contact{
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  .Title-contact{
+    font-size: 25px;
+  }
+  .phone, .mail{
+    font-size: 16px;
+  }
+  .item-network-footer{
+    width: 45px;
+    height: 45px;
+  }
+  
+  .insta-footer, .linkedin-fotter, .github-footer{
+    font-size: 20px;
   }
   .description-creator-site{
     margin-top: 10px;

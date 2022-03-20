@@ -180,6 +180,7 @@ body {
   transition: 0.4s;
   opacity: 0;
   visibility: hidden;
+  transition: 0.5s ease-in-out;
 }
 
 .menu-anim.is-active{
@@ -218,9 +219,25 @@ body {
   width: 0;
   height: 5px;
   display: inline-flex;
-  background-color: #c5e600;
   transition: 0.3s;
 }
+
+.menu-link-1::after{
+  background-color: #efefef;
+}
+.menu-link-2::after{
+  background-color: #36382E;
+}
+.menu-link-3::after{
+  background-color: #464655;
+}
+.menu-link-4::after{
+  background-color: #885A5A;
+}
+.menu-link-5::after{
+  background-color: #403D39;
+}
+
 .menu-link:hover::after{
   width: 100%;
 }
@@ -472,7 +489,9 @@ body {
   .menu-anim{
     padding: 10px;
   }
-}
+  .menu-link{
+    font-size: 30px;
+  }}
 
 /* ---------------------------------------------- */
 /* deuxième section, parlons de moi */
@@ -920,7 +939,7 @@ body {
 /* longeur et animation des bar progress skill divers*/
 @keyframes load-divers-1 {
   0% { width: 0; }
-  100% { width: 100%; }
+  100% { width: 90%; }
 }
 @keyframes load-divers-2 {
   0% { width: 0; }
@@ -1327,6 +1346,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding-left: 50px;
+    box-shadow: none
   }
 
   .circle-picto{

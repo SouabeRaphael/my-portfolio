@@ -387,10 +387,13 @@ body {
   transform: rotate(90deg);
 }
 
+.scroll-down a{
+  text-decoration: none;
+}
+
 .info-scroll{
   color: white;
   font-size: 15px;
-
 }
 
 .fa-arrow-right{
@@ -1303,6 +1306,10 @@ body {
   top: 97.7%;
   right: 0%;
   transform: rotate(90deg);
+}
+
+.scroll-down-portfolio a{
+  text-decoration: none;
 }
 
 /* ---------------------------------------------------------------------- */

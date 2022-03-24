@@ -516,9 +516,18 @@ body {
   transform: translateY(80px);
 }
 
-.profil{
+/* .profil{
   width: 455px;
   height: 592px;
+} */
+
+.picture-profil{
+  width: 455px;
+  height: 592px;
+  background-image: url(../img/photo-profil.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .border-picture{
@@ -621,6 +630,30 @@ body {
     width: 95%;
   }
 }
+@media (max-width: 1100px) {
+  .border-picture{
+    display: none;
+  }
+  .student-title{
+    font-size: 50px;
+  }
+  .description{
+    font-size: 20px;
+  }
+  .download-CV{
+    font-size: 15px;
+    padding: 15px 25px;
+  }
+  .picture-profil{
+    width: 400px;
+    height: 530px;
+    background-image: url(../img/photo-profil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+}
 @media (max-width: 1000px) {
   .seconde-page{
     height: 110vh;
@@ -635,10 +668,7 @@ body {
     flex-direction: column;
     margin: 0;
   }
-  .border-picture{
-    display: none;
-  }
-  .profil{
+  .picture-profil{
     width: 380px;
     height: 490px;
   }
@@ -662,7 +692,7 @@ body {
   }
 }
 @media (max-width: 800px) {
-  .profil{
+  .picture-profil{
     width: 330px;
     height: 350px;
   }
@@ -671,7 +701,7 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .profil{
+  .picture-profil{
     width: 250px;
     height: 274px;
   }
@@ -1436,6 +1466,9 @@ body {
   .section-rigth-card{
     width: 90%;
     height: 70%;
+  }
+  .description-portfolio{
+    margin-top: 10px;
   }
 }
 @media (max-width: 400px) {

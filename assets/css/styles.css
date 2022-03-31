@@ -276,8 +276,8 @@ body {
 .first-page {
   width: 100%;
   height: 100vh;
-  background-image: url(../img/photo-noir-et-blanc-retouche.png);
-  background-position: center;
+  background-image: url(../img/profil-noir-blanc.png);
+  background-position: 50% 80%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
